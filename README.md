@@ -35,13 +35,7 @@
 
 ## 🛠️ 설치 가이드
 
-### 1단계: 저장소 클론
-```bash
-git clone https://github.com/your-username/speaker-diarization-system.git
-cd speaker-diarization-system
-```
-
-### 2단계: 가상환경 생성
+### 1단계: 가상환경 생성
 ```bash
 # Windows
 python -m venv venv
@@ -52,18 +46,18 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 3단계: CUDA 설치 (GPU 사용 시)
+### 2단계: CUDA 설치 (GPU 사용 시)
 ```bash
 # CUDA 11.8용 PyTorch 설치
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
 
-### 4단계: 의존성 설치
+### 3단계: 의존성 설치
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5단계: 시스템 확인
+### 4단계: 시스템 확인
 ```bash
 python main.py info
 ```
@@ -311,15 +305,6 @@ speaker-diarization-system/
 ├── README.md                  # 이 파일
 └── output/                    # 결과 파일 저장 디렉토리
 ```
-
-## 🔄 버전 정보
-
-### v1.0.0
-- ✅ VAD 알고리즘 개선으로 음성 구간 감지율 향상
-- ✅ pyannote 접근 권한 문제 우회 방법 추가
-- ✅ RTX 4060 메모리 최적화 강화
-- ✅ Hugging Face 토큰 설정 및 pyannote 모델 사용 조건 동의 필요
-- ✅ 경량 화자 분리 모드 이슈 존재 (화자 인식률 낮음)
 
 ### 개발 환경 설정
 ```bash
